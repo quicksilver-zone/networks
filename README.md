@@ -1,6 +1,8 @@
 # Quicksilver Mainnet joining instructions
 
-** Note: commit hashes and shasums will be added before launch **
+**Note: commit hashes and shasums will be added before launch**
+
+For gentx instructions, follow the installation guide and follow the link below.
 
 ## Minimum hardware requirements
 
