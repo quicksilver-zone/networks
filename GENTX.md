@@ -36,7 +36,7 @@
   ```
 
 5. Upload gentx.json
-  Copy the contents of the above command into a commit at `https://github.com/ingenuity-build/mainnet` in the `gentxs` folder. Name the file with your validator moniker (figment.json, witval.json, etc.) so we can contact you in the event of a problem. If your gentx is invalid and your file is not appropriately named you may miss out on genesis!
+  Copy the contents of the above command into a commit at `https://github.com/ingenuity-build/mainnet` in the `quicksilver-1/gentxs` folder. Name the file with your validator moniker (figment.json, witval.json, etc.) so we can contact you in the event of a problem. If your gentx is invalid and your file is not appropriately named you may miss out on genesis!
 
 ### Launch day
 
