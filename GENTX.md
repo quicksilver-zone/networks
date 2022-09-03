@@ -25,7 +25,7 @@
 3. Add genesis account
 
   ```sh
-  > quicksilverd add-genesis-account 51000000uqck
+  > quicksilverd add-genesis-account <key> 51000000uqck
   ```
 
 4. Create gentx file
