@@ -38,7 +38,7 @@ To verify if the installation was successful, execute the following command:
 It will display the version of quicksilverd currently installed:
 
   ```sh
-  name: quicksilverd
+  name: quicksilver
   server_name: quicksilverd
   version: 1.0.0
   commit: XXX
