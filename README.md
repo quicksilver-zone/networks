@@ -12,13 +12,11 @@ For gentx instructions, follow the installation guide and follow the link below.
 
 ## Software requirements
 
-Quicksilver has releases for Linux [here](https://github.com/ingenuity-build/quicksilver/releases/tag/v1.0.0).
-
-- Latest version : [v1.0.0](https://github.com/ingenuity-build/quicksilver/releases/tag/v1.0.0)
+Quicksilver v1.0.0 will be released once a final audit report has been released.
 
 ### Install Quicksilver
 
-Requires [Go version v1.18+](https://golang.org/doc/install).
+Requires [Go version v1.19+](https://golang.org/doc/install).
 
   ```sh
   > git clone https://github.com/ingenuity-build/quicksilver && cd quicksilver
@@ -43,7 +41,7 @@ It will display the version of quicksilverd currently installed:
   version: 1.0.0
   commit: XXX
   build_tags: netgo,ledger
-  go: go version go1.18 linux/amd64
+  go: go version go1.19 linux/amd64
   ```
 ## Genesis validators
 
@@ -100,13 +98,4 @@ It will display the version of quicksilverd currently installed:
    --chain-id quicksilver-1 \
    --from <key-name>
    ```
-## Peers
 
-```
-XXX
-```
-
-## Endpoints
-
-- https://rpc.quicksilver.zone
-- https://lcd.quicksilver.zone
