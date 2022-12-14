@@ -7,11 +7,11 @@
           "moniker": "Klub Staking",
           "identity": "CF0852DD298E2B0D",
           "website": "https://klub.ki/staking",
-          "security_contact": "",
-          "details": "Highly secure and resilient infrastructure for Quicksilver Network. Powered by Klub."
+          "security_contact": "security@klub.ki",
+          "details": "Highly secure and resilient infrastructure for Quicksilver. Powered by Klub."
         },
         "commission": {
-          "rate": "0.010000000000000000",
+          "rate": "0.050000000000000000",
           "max_rate": "0.100000000000000000",
           "max_change_rate": "0.010000000000000000"
         },
@@ -28,7 +28,7 @@
         }
       }
     ],
-    "memo": "4fcd57e5df549dc95e886295cd233ece01923e33@10.70.2.213:26656",
+    "memo": "23ebde0a3711817f66fd82436b32f3935e0b47ac@51.75.125.8:26656",
     "timeout_height": "0",
     "extension_options": [],
     "non_critical_extension_options": []
@@ -53,9 +53,10 @@
       "gas_limit": "200000",
       "payer": "",
       "granter": ""
-    }
+    },
+    "tip": null
   },
   "signatures": [
-    "EDLiK+UPLDvgutBFRE/U4zEoYCwP4zoiHvdN/69+Fu9/fdJk8scK7dsIrIcFCVMlG05u1PnDowZi3rAGf4MWkA=="
+    "5LGhERd+TervdDS/NJQquv27i2WFDtlEJKo2DCqOjZ1+W/7/7amXy1eE4cnmt4Ot5xh9UW/KfMEhF4Xs8jbv2Q=="
   ]
 }
