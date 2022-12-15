@@ -75,15 +75,15 @@ It will display the version of quicksilverd currently installed:
    ```
 
 4. Define minimum gas prices
-```
+    ```sh
     sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.0001uqck\"/;" ~/.quicksilverd/config/app.toml
-```
+    ```
 
 5. Define seed nodes
-```
+    ```sh
     export SEEDS="20e1000e88125698264454a884812746c2eb4807@seeds.lavenderfive.com:11156,babc3f3f7804933265ec9c40ad94f4da8e9e0017@seed.rhinostake.com:11156"
     sed -i.bak -e "s/^seeds *=.*/seeds = \"$SEEDS\"/" ~/.quicksilverd/config/config.toml
-```
+    ```
 
 6. Start your node and sync to the latest block
 
