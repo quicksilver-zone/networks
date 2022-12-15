@@ -112,7 +112,7 @@ Using go version 1.15 or later:
 go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@latest
 ```
 
-or, specify the target version:
+or, specify the target version, for example:
 
 ```
 go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@v1.0.0
