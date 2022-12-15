@@ -70,7 +70,7 @@ It will display the version of quicksilverd currently installed:
    **Genesis sha256**
 
    ```sh
-    shasum -a 256 ~/.quicksilverd/config/genesis.json
+    jq . -S -c ~/.quicksilverd/config/genesis.json | shasum -a 256 
     8bfc3aa7a81eb8c1a2452bdb8d256b372ecfdd67c634b4f63846f755ef4dd815  /home/<user>/.quicksilverd/config/genesis.json
    ```
 
