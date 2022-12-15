@@ -10,8 +10,6 @@ Genesis Transaction Submissions have closed.
 
 ## Software requirements
 
-Quicksilver v1.0.0 will be released once a final audit report has been released.
-
 ### Install Quicksilver
 
 Requires [Go version v1.19+](https://golang.org/doc/install).
