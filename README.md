@@ -64,7 +64,7 @@ It will display the version of quicksilverd currently installed:
    Fetch `genesis.json` into `quicksilverd`'s `config` directory (default: ~/.quicksilverd)
 
    ```sh
-   > curl -s https://raw.githubusercontent.com/ingenuity-build/mainnet/main/genesis/genesis.json > genesis.json
+   > curl -s https://raw.githubusercontent.com/ingenuity-build/mainnet/main/genesis.json > genesis.json
    ```
 
    **Genesis sha256**
