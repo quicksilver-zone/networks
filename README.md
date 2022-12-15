@@ -37,9 +37,9 @@ It will display the version of quicksilverd currently installed:
   name: quicksilverd
   server_name: quicksilverd
   version: 1.0.0
-  commit: XXX
-  build_tags: netgo,ledger
-  go: go version go1.19 linux/amd64
+  commit: 6371729e38fe8f55c02c9d550107f4618c130c89
+  build_tags: netgo,ledger,musl
+  go: go version go1.19.4 linux/amd64
   ```
 ## Genesis validators
 
