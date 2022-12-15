@@ -1,14 +1,12 @@
 # Quicksilver Mainnet joining instructions
 
-**Note: commit hashes and shasums will be added before launch**
-
-For gentx instructions, follow the installation guide and follow the link below.
+Genesis Transaction Submissions have closed.
 
 ## Minimum hardware requirements
 
 - 4 cores (max. clock speed possible)
 - 16GB RAM
-- 500GB of NVMe or SSD disk
+- 500GB+ of NVMe or SSD disk
 
 ## Software requirements
 
@@ -45,8 +43,6 @@ It will display the version of quicksilverd currently installed:
   ```
 ## Genesis validators
 
-**If the network is already running; continue with the steps below. Otherwise follow the instructions [here](GENTX.md) to create an gentx.**
-
 ## Create a validator
 
 1. Init Chain and start your node
@@ -71,16 +67,16 @@ It will display the version of quicksilverd currently installed:
    Fetch `genesis.json` into `quicksilverd`'s `config` directory (default: ~/.quicksilverd)
 
    ```sh
-   > curl -s https://raw.githubusercontent.com/ingenuity-build/mainnet/main/genesis/genesis.tar.gz > genesis.tar.gz
-   > tar -C ~/.quicksilverd/config/ -xvf genesis.tar.gz
+   > curl -s https://raw.githubusercontent.com/ingenuity-build/mainnet/main/genesis/genesis.json > genesis.json
    ```
 
    **Genesis sha256**
 
    ```sh
     shasum -a 256 ~/.quicksilverd/config/genesis.json
-    XXX  /home/<user>/.quicksilverd/config/genesis.json
+    8bfc3aa7a81eb8c1a2452bdb8d256b372ecfdd67c634b4f63846f755ef4dd815  /home/<user>/.quicksilverd/config/genesis.json
    ```
+
 4. Start your node and sync to the latest block
 
 5. Create validator
@@ -94,6 +90,7 @@ It will display the version of quicksilverd currently installed:
    --min-self-delegation "1" \
    --details "a short description lives here" \
    --pubkey=$(quicksilverd tendermint show-validator) \
+   --security-contact "youremail@goes.here" \
    --moniker <your_moniker> \
    --chain-id quicksilver-1 \
    --from <key-name>
