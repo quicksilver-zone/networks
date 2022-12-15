@@ -39,7 +39,6 @@ It will display the version of quicksilverd currently installed:
   build_tags: netgo,ledger,musl
   go: go version go1.19.4 linux/amd64
   ```
-## Genesis validators
 
 ## Create a validator
 
