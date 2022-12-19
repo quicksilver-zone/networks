@@ -20,6 +20,8 @@ Requires [Go version v1.19+](https://golang.org/doc/install).
   > git checkout v1.0.0
   > make install
   ```
+  
+binary file will be made on following path `quicksilver/build`
 
 #### Verify installation
 
