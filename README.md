@@ -10,7 +10,7 @@ Chain restart is due at 1500 UTC on Tuesday 3rd January 2023. We will use `quick
 1. Run `python3 migrate-genesis.py`
 1. `jq . genesis.json -S -c | shasum -a256`
 1. Check output matches `df8e9b87c7495e8a62932c8660724dd906255b0ec9ee5094cfcb860fc0115ec1`
-1. `cp genesis.json ~/.quicksilverd/config/genesis.json`
+1. `cp genesis.json ~/.quicksilverd/config/genesis.json` (be sure to replace `~/.quicksilverd` with your node's `HOME`).
 1. `quicksilverd tendermint unsafe-reset-all`
 1. If you use an external signer, update the chain_id and reset state.
 1. `quicksilverd start` or, if using systemd, `systemctl start quicksilver`
