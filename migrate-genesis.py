@@ -44,14 +44,14 @@ print(input.get('app_state').get('bank').get('supply'))
 print("⚛️  Removing ibc channels, clients, connections and capabilities")
 ## remove ibc capabilities, clients, connections, channels
 input.get('app_state').update({'capability': {"index": "1"}})
-input.get('app_state').get('ibc').update({'channel_genesis': {}, 'client_genesis': {}, 'connection_genesis': {"params": {"max_expected_time_per_block": "30000000000"}}})
+input.get('app_state').get('ibc').update({"channel_genesis": {"channels": [],"acknowledgements": [],"commitments": [],"receipts": [],"send_sequences": [],"recv_sequences": [],"ack_sequences": [],"next_channel_sequence": "0"}, "client_genesis": {"clients": [], "clients_consensus": [], "clients_metadata": [], "params": {"allowed_clients": ["06-solomachine","07-tendermint"]}, "create_localhost": False, "next_client_sequence": "0"}, "connection_genesis": {"connections": [],"client_connection_paths": [],"next_connection_sequence": "0","params": {"max_expected_time_per_block": "30000000000"}}})
 input.get('app_state').get('transfer').update({'denom_traces': []})
-input.get('app_state').get('interchainaccounts').update({'controller_genesis_state': {"params": {"controller_enabled": True}}})
+input.get('app_state').get('interchainaccounts').update({"controller_genesis_state": {"active_channels": [],"interchain_accounts": [],"ports": [],"params": {"controller_enabled": True}},"host_genesis_state": {"active_channels": [],"interchain_accounts": [],"port": "icahost","params": {"host_enabled": False,"allow_messages": []}}})
 
 ## remove interchainstaking / interchain query entries
 print("⚛️  Zeroing interchainstaking and interchainquery state")
 input.get('app_state').get('interchainquery').update({'queries': []})
-input.get('app_state').get('interchainstaking').update({'params': input.get('app_state').get('interchainstaking').get('params')})
+input.get('app_state').update({'interchainstaking': {'params': input.get('app_state').get('interchainstaking').get('params')}})
 
 ## reset epochs
 print("⚛️  Zeroing epoch state")
