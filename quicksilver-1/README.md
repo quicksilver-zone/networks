@@ -1,6 +1,7 @@
 # Quicksilver Mainnet joining instructions
 
-Genesis Transaction Submissions have closed.
+** This directory contains the files and instructions for quicksilver-1. These instructions are deprecated and should not be used.**
+** Please refer to documentation in the route of this repository.**
 
 ## Minimum hardware requirements
 
@@ -16,31 +17,32 @@ Quicksilver v1.0.0 will be released once a final audit report has been released.
 
 Requires [Go version v1.19+](https://golang.org/doc/install).
 
-  ```sh
-  > git clone https://github.com/ingenuity-build/quicksilver && cd quicksilver
-  > git fetch origin --tags
-  > git checkout v1.0.0
-  > make install
-  ```
+```sh
+> git clone https://github.com/ingenuity-build/quicksilver && cd quicksilver
+> git fetch origin --tags
+> git checkout v1.0.0
+> make install
+```
 
 #### Verify installation
 
 To verify if the installation was successful, execute the following command:
 
-  ```sh
-  > quicksilverd version --long
-  ```
+```sh
+> quicksilverd version --long
+```
 
 It will display the version of quicksilverd currently installed:
 
-  ```sh
-  name: quicksilverd
-  server_name: quicksilverd
-  version: 1.0.0
-  commit: XXX
-  build_tags: netgo,ledger
-  go: go version go1.19 linux/amd64
-  ```
+```sh
+name: quicksilverd
+server_name: quicksilverd
+version: 1.0.0
+commit: XXX
+build_tags: netgo,ledger
+go: go version go1.19 linux/amd64
+```
+
 ## Genesis validators
 
 ## Create a validator
@@ -52,13 +54,13 @@ It will display the version of quicksilverd currently installed:
    ```
 
 2. Create a local key pair
-  **Note: we recommend _only_ using Ledger for mainnet! Key security is important!**
+   **Note: we recommend _only_ using Ledger for mainnet! Key security is important!**
 
    ```sh
    > ## create a new key:
    > quicksilverd keys add <key-name>
    > ## or use a ledger:
-   > quicksilverd key add <key-name> --ledger     
+   > quicksilverd key add <key-name> --ledger
    > ## or import an old key:
    > quicksilverd keys show <key-name> -a
    ```
@@ -95,4 +97,3 @@ It will display the version of quicksilverd currently installed:
    --chain-id quicksilver-1 \
    --from <key-name>
    ```
-
