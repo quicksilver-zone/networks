@@ -1,7 +1,7 @@
 # Quicksilver Mainnet joining instructions
 
 ** This directory contains the files and instructions for quicksilver-1. These instructions are deprecated and should not be used.**
-** Please refer to documentation in the route of this repository.**
+** Please refer to documentation in the root of this repository.**
 
 ## Minimum hardware requirements
 
