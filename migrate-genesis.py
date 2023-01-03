@@ -1,6 +1,15 @@
 #!/usr/bin/python3
-
 import json
+
+'''
+This script exists to take raw exported state from quicksilver-1 chain, zero the interchainstaking and interchainquery state, and ibc connections/channels/clients.
+It also burns the uqatom balance (users have already been reimbursed the underlying atoms) and ibc/ denoms (1.12 osmo, and 0.888 swth), which will be reimbursed.
+This is cheaper, quicker and easier than spending 100s of osmo and going through governance to recover a channel with $1.20 locked in it.
+
+Min commission rates are adjusted up to 5%, and the global min commission rate param is set to 5%.
+
+Chain ID is set to quicksilver-2 and the genesis time is set to 1500 UTC on 03/01/2023.
+'''
 
 with open('export-quicksilver-1-115000.json') as file:
   input = json.load(file)
