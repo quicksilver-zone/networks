@@ -8,7 +8,7 @@ This is cheaper, quicker and easier than spending 100s of osmo and going through
 
 Min commission rates are adjusted up to 5%, and the global min commission rate param is set to 5%.
 
-Chain ID is set to quicksilver-2 and the genesis time is set to 1500 UTC on 03/01/2023.
+Chain ID is set to quicksilver-2 and the genesis time is set to 1700 UTC on 03/01/2023.
 '''
 
 with open('export-quicksilver-1-115000.json') as file:
@@ -73,7 +73,7 @@ input.get('app_state').get('staking').get('params').update({'min_commission_rate
 
 ## chain id and genesis time
 print("⚛️  Setting chain id and genesis time")
-input.update({'chain_id': 'quicksilver-2', 'genesis_time': '2023-01-03T15:00:00Z'})
+input.update({'chain_id': 'quicksilver-2', 'genesis_time': '2023-01-03T17:00:00Z'})
 
 with open("genesis.json", "w+") as file:
   json.dump(input, file)

@@ -1,6 +1,6 @@
 # Quicksilver-2 chain restart instructions
 
-Chain restart is due at 1500 UTC on Tuesday 3rd January 2023. We will use `quicksilverd v1.2.0` to export and restart the chain. You must upgrade before the export, else the export will fail. For build instructions, see below.
+Chain restart is due at 1700 UTC on Tuesday 3rd January 2023. We will use `quicksilverd v1.2.0` to export and restart the chain. You must upgrade before the export, else the export will fail. For build instructions, see below.
 
 1. `git fetch && git checkout v1.2.0`
 2. `make install`
@@ -9,7 +9,7 @@ Chain restart is due at 1500 UTC on Tuesday 3rd January 2023. We will use `quick
 5. Check output matches `7df73ba5fdbaf6f4b5cced3f16b8f44047ad8f42a7a6f87f764413b474e81c54`
 6. Run `python3 migrate-genesis.py`
 7. `jq . genesis.json -S -c | shasum -a256`
-8. Check output matches `df8e9b87c7495e8a62932c8660724dd906255b0ec9ee5094cfcb860fc0115ec1`
+8. Check output matches `9da9e0d383028ff953bb08d929d17aae72f8ca764dea056c6ad4c9a8d7b895c6`
 9. `cp genesis.json ~/.quicksilverd/config/genesis.json` (be sure to replace `~/.quicksilverd` with your node's `HOME`).
 10. `quicksilverd tendermint unsafe-reset-all`
 11. If you use an external signer, update the chain_id and reset state.
@@ -96,7 +96,7 @@ go: go version go1.19.2 linux/amd64
 
    ```sh
     jq . ~/.quicksilverd/config/genesis.json -S -c | shasum -a256
-    df8e9b87c7495e8a62932c8660724dd906255b0ec9ee5094cfcb860fc0115ec1  -
+    9da9e0d383028ff953bb08d929d17aae72f8ca764dea056c6ad4c9a8d7b895c6  -
    ```
 
 4. Define minimum gas prices
