@@ -95,13 +95,26 @@ go: go version go1.19.2 linux/amd64
    **Genesis sha256**
 
    ```sh
-    shasum -a 256 ~/.quicksilverd/config/genesis.json
-    df8e9b87c7495e8a62932c8660724dd906255b0ec9ee5094cfcb860fc0115ec1  /home/<user>/.quicksilverd/config/genesis.json
+    jq . ~/.quicksilverd/config/genesis.json -S -c | shasum -a256
+    df8e9b87c7495e8a62932c8660724dd906255b0ec9ee5094cfcb860fc0115ec1  -
    ```
 
-4. Start your node and sync to the latest block
+4. Define minimum gas prices
 
-5. Create validator
+```
+sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.0001uqck\"/;" ~/.quicksilverd/config/app.toml
+```
+
+5. Define seed nodes
+
+```
+export SEEDS="20e1000e88125698264454a884812746c2eb4807@seeds.lavenderfive.com:11156,babc3f3f7804933265ec9c40ad94f4da8e9e0017@seed.rhinostake.com:11156,00f51227c4d5d977ad7174f1c0cea89082016ba2@seed-quick-mainnet.moonshot.army:26650"
+sed -i.bak -e "s/^seeds *=.*/seeds = \"$SEEDS\"/" ~/.quicksilverd/config/config.toml
+```
+
+6. Start your node and sync to the latest block
+
+7. Create validator
 
    ```sh
    $ quicksilverd tx staking create-validator \
