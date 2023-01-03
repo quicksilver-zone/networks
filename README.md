@@ -1,6 +1,21 @@
-# Quicksilver Mainnet joining instructions
+# Quicksilver-2 chain restart instructions
 
-Genesis Transaction Submissions have closed.
+Chain restart is due at 1500 UTC on Tuesday 3rd January 2023. We will use `quicksilverd v1.2.0` to export and restart the chain. You must upgrade before the export, else the export will fail. For build instructions, see below.
+
+1. `git fetch && git checkout v1.2.0`
+2. `make install`
+3. `quicksilverd export --for-zero-height --height 115000 > export-quicksilver-1-115000.json`
+4. `jq . export-quicksilver-1-115000.json -S -c | shasum -a256`
+5. Check output matches `7df73ba5fdbaf6f4b5cced3f16b8f44047ad8f42a7a6f87f764413b474e81c54`
+6. Run `python3 migrate-genesis.py`
+7. `jq . genesis.json -S -c | shasum -a256`
+8. Check output matches `df8e9b87c7495e8a62932c8660724dd906255b0ec9ee5094cfcb860fc0115ec1`
+9. `cp genesis.json ~/.quicksilverd/config/genesis.json` (be sure to replace `~/.quicksilverd` with your node's `HOME`).
+10. `quicksilverd tendermint unsafe-reset-all`
+11. If you use an external signer, update the chain_id and reset state.
+12. `quicksilverd start` or, if using systemd, `systemctl start quicksilver`
+
+# Quicksilver Mainnet joining instructions
 
 ## Minimum hardware requirements
 
@@ -10,52 +25,62 @@ Genesis Transaction Submissions have closed.
 
 ## Software requirements
 
+Current version: v1.2.0
+
 ### Install Quicksilver
 
 Requires [Go version v1.19+](https://golang.org/doc/install).
 
-  ```sh
-  > git clone https://github.com/ingenuity-build/quicksilver && cd quicksilver
-  > git fetch origin --tags
-  > git checkout v1.0.0
-  > make install
-  ```
+```sh
+> git clone https://github.com/ingenuity-build/quicksilver && cd quicksilver
+> git fetch origin --tags
+> git checkout v1.2.0
+> make install
+or
+> make build
+```
+
+`make build` will output the binary in the `build` directory.
+
+Alternatively, to build a docker container, use `make build-docker`.
 
 #### Verify installation
 
 To verify if the installation was successful, execute the following command:
 
-  ```sh
-  > quicksilverd version --long
-  ```
+```sh
+> quicksilverd version --long
+```
 
 It will display the version of quicksilverd currently installed:
 
-  ```sh
-  name: quicksilver
-  server_name: quicksilverd
-  version: 1.0.0
-  commit: 6371729e38fe8f55c02c9d550107f4618c130c89
-  build_tags: netgo,ledger,musl
-  go: go version go1.19.4 linux/amd64
-  ```
+```sh
+name: quicksilverd
+server_name: quicksilverd
+version: 1.2.0
+commit: 0ce6daf33aaeb93e1cb306a1fc8672c0123cffd1
+build_tags: netgo,ledger
+go: go version go1.19.2 linux/amd64
+```
+
+**Ensure go version is 1.19+; using 1.18 will cause non-deterministic behaviour.**
 
 ## Create a validator
 
 1. Init Chain and start your node
 
    ```sh
-   > quicksilverd init <moniker-name> --chain-id=quicksilver-1
+   > quicksilverd init <moniker-name> --chain-id=quicksilver-2
    ```
 
 2. Create a local key pair
-  **Note: we recommend _only_ using Ledger for mainnet! Key security is important!**
+   **Note: we recommend _only_ using Ledger for mainnet! Key security is important!**
 
    ```sh
    > ## create a new key:
    > quicksilverd keys add <key-name>
    > ## or use a ledger:
-   > quicksilverd key add <key-name> --ledger     
+   > quicksilverd key add <key-name> --ledger
    > ## or import an old key:
    > quicksilverd keys show <key-name> -a
    ```
@@ -70,20 +95,22 @@ It will display the version of quicksilverd currently installed:
    **Genesis sha256**
 
    ```sh
-    jq . -S -c ~/.quicksilverd/config/genesis.json | shasum -a 256 
-    8bfc3aa7a81eb8c1a2452bdb8d256b372ecfdd67c634b4f63846f755ef4dd815  /home/<user>/.quicksilverd/config/genesis.json
+    jq . ~/.quicksilverd/config/genesis.json -S -c | shasum -a256
+    df8e9b87c7495e8a62932c8660724dd906255b0ec9ee5094cfcb860fc0115ec1  -
    ```
 
 4. Define minimum gas prices
-    ```sh
+
+   ```sh
     sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.0001uqck\"/;" ~/.quicksilverd/config/app.toml
-    ```
+   ```
 
 5. Define seed nodes
-    ```sh
+
+   ```sh
     export SEEDS="20e1000e88125698264454a884812746c2eb4807@seeds.lavenderfive.com:11156,babc3f3f7804933265ec9c40ad94f4da8e9e0017@seed.rhinostake.com:11156,00f51227c4d5d977ad7174f1c0cea89082016ba2@seed-quick-mainnet.moonshot.army:26650"
     sed -i.bak -e "s/^seeds *=.*/seeds = \"$SEEDS\"/" ~/.quicksilverd/config/config.toml
-    ```
+   ```
 
 6. Start your node and sync to the latest block
 
@@ -100,7 +127,7 @@ It will display the version of quicksilverd currently installed:
    --pubkey=$(quicksilverd tendermint show-validator) \
    --security-contact "youremail@goes.here" \
    --moniker <your_moniker> \
-   --chain-id quicksilver-1 \
+   --chain-id quicksilver-2 \
    --from <key-name>
    ```
 
@@ -116,25 +143,25 @@ Cosmovisor is process manager for Cosmos-SDK application binaries that enables n
 
 Using go version 1.15 or later:
 
-```
+```sh
 go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@latest
 ```
 
 or, specify the target version, for example:
 
-```
+```sh
 go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@v1.0.0
 ```
 
 Confirm installation with:
 
-```
+```sh
 which cosmovisor
 ```
 
 The output should be a path to the cosmovisor binary:
 
-```
+```sh
 /home/<user>/go/bin/cosmovisor
 ```
 
@@ -152,7 +179,7 @@ Ensure your environment setup is correctly configured to persist across sessions
 
 Cosmovisor expects the following directory structure in `$DAEMON_HOME/cosmovisor`:
 
-```
+```sh
 .
 ├── current -> genesis or upgrades/<name>
 ├── genesis
@@ -166,7 +193,7 @@ Cosmovisor expects the following directory structure in `$DAEMON_HOME/cosmovisor
 
 Create the target directory structure with the following:
 
-```
+```sh
 mkdir -p $DAEMON_HOME/cosmovisor/genesis/bin
 mkdir -p $DAEMON_HOME/cosmovisor/upgrades
 ```
@@ -177,10 +204,9 @@ mkdir -p $DAEMON_HOME/cosmovisor/upgrades
 
 Cosmovisor requires the genesis binary to be set. Do this by copying the quicksilverd binary to `$DAEMON_HOME/cosmovisor/genesis/bin/$DAEMON_NAME`.
 
-```
+```sh
 # find quicksilverd binary
 which quicksilverd
-
 # copy binary to cosmovisor genesis using output from above command, e.g.
 cp build/quicksilverd $DAEMON_HOME/cosmovisor/genesis/bin/$DAEMON_NAME
 ```
@@ -189,17 +215,16 @@ cp build/quicksilverd $DAEMON_HOME/cosmovisor/genesis/bin/$DAEMON_NAME
 
 Create the system service file:
 
-```
+```sh
 sudo touch /etc/systemd/system/cosmovisor.service
 ```
 
 Use an editor like `vim`, `micro` or `nano` and set the contents of the file according to your system configuration, for example:
 
-```
+```sh
 [Unit]
 Description=cosmovisor
 After=network-online.target
-
 [Service]
 User=<your-user>
 ExecStart=/home/<your-user>/go/bin/cosmovisor start
@@ -218,7 +243,6 @@ Environment="DAEMON_DATA_BACKUP_DIR=${HOME}/.quicksilverd"
 # Set to true if disk space is limited:
 Environment="UNSAFE_SKIP_BACKUP=false"
 Environment="DAEMON_PREUPGRADE_MAX_RETRIES=0"
-
 [Install]
 WantedBy=multi-user.target
 ```
@@ -227,7 +251,7 @@ WantedBy=multi-user.target
 
 Enable and start the cosmovisor service:
 
-```
+```sh
 sudo systemctl daemon-reload
 sudo systemctl enable cosmovisor
 sudo systemctl restart cosmovisor
@@ -235,6 +259,6 @@ sudo systemctl restart cosmovisor
 
 Check that the service is running:
 
-```
+```sh
 sudo systemctl status cosmovisor
 ```
