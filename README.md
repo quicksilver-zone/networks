@@ -249,7 +249,7 @@ Chain restart is due at 1500 UTC on Tuesday 3rd January 2023. We will use `quick
 1. Check output matches `7df73ba5fdbaf6f4b5cced3f16b8f44047ad8f42a7a6f87f764413b474e81c54`
 1. Run `python3 migrate-genesis.py`
 1. `jq . genesis.json -S -c | shasum -a256`
-1. Check output matches `d64b8fe1f33fc879333a7de45986ae7871e93d714111a81c50ab203a6a2d1170`
+1. Check output matches `bb14cdaae68949b1c32b2e8dfd43e916d7e50d079c886ce39e9e575e6e31a82e`
 1. `cp genesis.json ~/.quicksilverd/config/genesis.json`
 1. `quicksilverd tendermint unsafe-reset-all`
 1. If you use an external signer, update the chain_id and reset state.

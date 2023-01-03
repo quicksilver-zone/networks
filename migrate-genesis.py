@@ -53,6 +53,11 @@ print("⚛️  Zeroing interchainstaking and interchainquery state")
 input.get('app_state').get('interchainquery').update({'queries': []})
 input.get('app_state').get('interchainstaking').update({'params': input.get('app_state').get('interchainstaking').get('params')})
 
+## reset epochs
+print("⚛️  Zeroing epoch state")
+input.get('app_state').get('epochs').get('epochs')[0].update({"start_time": "0001-01-01T00:00:00Z", "current_epoch": "0", "current_epoch_start_time": "0001-01-01T00:00:00Z", "epoch_counting_started": False, "current_epoch_start_height": "0"})
+input.get('app_state').get('epochs').get('epochs')[1].update({"start_time": "0001-01-01T00:00:00Z", "current_epoch": "0", "current_epoch_start_time": "0001-01-01T00:00:00Z", "epoch_counting_started": False, "current_epoch_start_height": "0"})
+
 ## update min commission to 5%
 print("⚛️  Updating validator min commission rate to 5%")
 for validator in input.get('app_state').get('staking').get('validators'):
