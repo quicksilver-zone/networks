@@ -71,6 +71,11 @@ for validator in input.get('app_state').get('staking').get('validators'):
 print("⚛️  Updating min_commission_rate param to 5%")
 input.get('app_state').get('staking').get('params').update({'min_commission_rate': "0.050000000000000000"})
 
+## clean Governance proposals
+print("⚛️  Cleaning Governance proposals")
+input.get('app_state').get('gov').update({'proposals': []})
+input.get('app_state').get('gov').update({'starting_proposal_id': "0"})
+
 ## chain id and genesis time
 print("⚛️  Setting chain id and genesis time")
 input.update({'chain_id': 'quicksilver-2', 'genesis_time': '2023-01-03T17:00:00Z'})
