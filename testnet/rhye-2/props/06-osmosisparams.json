@@ -1,0 +1,16 @@
+{
+"deposit": "10000000uqck",
+"proposer": "",
+"messages": [{
+    "@type": "/cosmos.gov.v1.MsgExecLegacyContent",
+    "content": {
+      "@type": "/quicksilver.participationrewards.v1.AddProtocolDataProposal",
+      "title": "Set OsmosisParams protocol data",
+      "description": "This proposal aims to set the OsmosisParams protocol data for rhye-2",
+      "type": "ProtocolDataTypeOsmosisParams",
+      "data": {"ChainID": "osmo-test-5", "BaseChain":"osmo-test-5", "BaseDenom":"uosmo"}
+    },
+    "authority": "quick10d07y265gmmuvt4z0w9aw880jnsr700j3xrh0p"
+}],
+"metadata": ""
+}

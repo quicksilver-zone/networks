@@ -1,0 +1,85 @@
+{
+  "deposit": "10000000uqck",
+  "proposer": "",
+  "messages": [
+    {
+      "@type": "/quicksilver.gov.v1.MsgExecLegacyContent",
+      "content": {
+        "@type": "/quicksilver.participationrewards.v1.AddProtocolDataProposal",
+        "title": "Set Osmosis CL pool protocol data for qatom/osmo",
+        "description": "This proposal aims to set the osmosis cl pool 463 for rhye-2",
+        "type": "ProtocolDataTypeOsmosisCLPool",
+        "data": {
+          "poolid": 463,
+          "poolname": "qosmo/osmo",
+          "denoms": {
+            "ibc/028474B27F581D177C2E69CB582D75E5ACC2BDC384E90E51108A85B5826555A2": {
+              "denom": "uqosmo",
+              "chainid": "provider"
+            },
+            "uosmo": {
+              "denom": "uosmo",
+              "chainid": "osmo-test-5"
+            }
+          },
+          "pooltype": "concentratedliquidity",
+          "isincentivized": true
+        }
+      },
+      "authority": "quick10d07y265gmmuvt4z0w9aw880jnsr700j3xrh0p"
+    },
+    {
+      "@type": "/cosmos.gov.v1.MsgExecLegacyContent",
+      "content": {
+        "@type": "/quicksilver.participationrewards.v1.AddProtocolDataProposal",
+        "title": "Set Osmosis CL pool protocol data for atom/osmo",
+        "description": "This proposal aims to set the osmosis pool 466 for rhye-2",
+        "type": "ProtocolDataTypeOsmosisCLPool",
+        "data": {
+          "poolid": 466,
+          "poolname": "atom/osmo",
+          "denoms": {
+            "ibc/18FA1B7336AD2A2A8C91FCF12AB35B79F293F7F5EF4717263FACEB2C52735254": {
+              "denom": "uatom",
+              "chainid": "provider"
+            },
+            "uosmo": {
+              "denom": "uosmo",
+              "chainid": "osmo-test-5"
+            }
+          },
+          "pooltype": "concentratedliquidity",
+          "isincentivized": false
+        }
+      },
+      "authority": "quick10d07y265gmmuvt4z0w9aw880jnsr700j3xrh0p"
+    },
+    {
+      "@type": "/cosmos.gov.v1.MsgExecLegacyContent",
+      "content": {
+        "@type": "/quicksilver.participationrewards.v1.AddProtocolDataProposal",
+        "title": "Set Osmosis CL pool protocol data for regen/osmo",
+        "description": "This proposal aims to set the osmosis CL pool 465 for rhye-2",
+        "type": "ProtocolDataTypeOsmosisCLPool",
+        "data": {
+          "poolid": 465,
+          "poolname": "regen/osmo",
+          "denoms": {
+            "ibc/D7F4C20BCF6C873D8E915DCE93BD1165A877D6331438693EFAA9331C3990C512": {
+              "denom": "uregen",
+              "chainid": "regen-redwood-1"
+            },
+            "uosmo": {
+              "denom": "uosmo",
+              "chainid": "osmo-test-5"
+            }
+          },
+          "pooltype": "concentratedliquidity",
+          "isincentivized": false
+        }
+      },
+      "authority": "quick10d07y265gmmuvt4z0w9aw880jnsr700j3xrh0p"
+    }
+  ],
+  "metadata": ""
+}

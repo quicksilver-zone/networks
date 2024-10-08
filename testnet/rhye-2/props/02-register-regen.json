@@ -1,0 +1,25 @@
+{
+"deposit": "10000000uqck",
+"proposer": "",
+"messages": [{
+  "@type": "/cosmos.gov.v1.MsgExecLegacyContent",
+  "content": {
+  "@type": "/quicksilver.interchainstaking.v1.RegisterZoneProposal",
+  "title": "register regen-redwood-1 zone",
+  "description": "register regen-redwood-1 zone",
+  "connection_id": "connection-2",
+  "base_denom": "uregen",
+  "local_denom": "uqregen",
+  "account_prefix": "regen",
+  "multi_send": false,
+  "liquidity_module": false,
+  "messages_per_tx": 8,
+  "unbonding_enabled": true,
+  "deposits_enabled": true,
+  "is_118": true,
+  "decimals": 6
+  },
+  "authority": "quick10d07y265gmmuvt4z0w9aw880jnsr700j3xrh0p"
+}],
+"metadata": ""
+}

@@ -1,0 +1,25 @@
+{
+"deposit": "10000000uqck",
+"proposer": "",
+"messages": [{
+  "@type": "/cosmos.gov.v1.MsgExecLegacyContent",
+  "content": {
+  "@type": "/quicksilver.interchainstaking.v1.RegisterZoneProposal",
+  "title": "register provider zone",
+  "description": "register provider zone",
+  "connection_id": "connection-0",
+  "base_denom": "uatom",
+  "local_denom": "uqatom",
+  "account_prefix": "cosmos",
+  "multi_send": false,
+  "liquidity_module": true,
+  "messages_per_tx": 8,
+  "unbonding_enabled": true,
+  "deposits_enabled": true,
+  "is_118": true,
+  "decimals": 6
+  },
+  "authority": "quick10d07y265gmmuvt4z0w9aw880jnsr700j3xrh0p"
+}],
+"metadata": ""
+}

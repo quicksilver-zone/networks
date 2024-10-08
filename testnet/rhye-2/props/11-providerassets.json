@@ -1,0 +1,62 @@
+{
+"deposit": "10000000uqck",
+"proposer": "",
+"messages": [
+  {
+    "@type": "/cosmos.gov.v1.MsgExecLegacyContent",
+    "content": {
+      "@type": "/quicksilver.participationrewards.v1.AddProtocolDataProposal",
+      "title": "Set LiquidToken protocol data for local qatom",
+      "description": "This proposal aims to set the allowed liquid tokens protocol data for rhye-2/uqatom",
+      "type": "ProtocolDataTypeLiquidToken",
+      "data": {"ChainID": "rhye-2", "RegisteredZoneChainID":"provider", "QAssetDenom":"uqatom", "IbcDenom": "uqatom"}
+    },
+    "authority": "quick10d07y265gmmuvt4z0w9aw880jnsr700j3xrh0p"
+  },
+  {
+    "@type": "/cosmos.gov.v1.MsgExecLegacyContent",
+    "content": {
+      "@type": "/quicksilver.participationrewards.v1.AddProtocolDataProposal",
+      "title": "Set LiquidToken protocol data for osmosis qatom",
+      "description": "This proposal aims to set the allowed liquid tokens protocol data for osmo-test-5/uqatom",
+      "type": "ProtocolDataTypeLiquidToken",
+      "data": {"ChainID": "osmo-test-5", "RegisteredZoneChainID":"provider", "QAssetDenom":"uqatom", "IbcDenom": "ibc/4D6D8893FF790D383CC035ED881B2F24D1DFF2D846EF0DAE8A4005981015EBBA"}
+    },
+    "authority": "quick10d07y265gmmuvt4z0w9aw880jnsr700j3xrh0p"
+  },
+  {
+    "@type": "/cosmos.gov.v1.MsgExecLegacyContent",
+    "content": {
+      "@type": "/quicksilver.participationrewards.v1.AddProtocolDataProposal",
+      "title": "Set LiquidToken protocol data for provider qatom",
+      "description": "This proposal aims to set the allowed liquid tokens protocol data for provider/uqatom",
+      "type": "ProtocolDataTypeLiquidToken",
+      "data": {"ChainID": "provider", "RegisteredZoneChainID":"provider", "QAssetDenom":"uqatom", "IbcDenom": "ibc/BAB8D6BEA2E1A3DF15BC3163DC343504B72C909D7E22366FEA115DE72AD88F33"}
+    },
+    "authority": "quick10d07y265gmmuvt4z0w9aw880jnsr700j3xrh0p"
+  },
+  {
+    "@type": "/cosmos.gov.v1.MsgExecLegacyContent",
+    "content": {
+      "@type": "/quicksilver.participationrewards.v1.AddProtocolDataProposal",
+      "title": "Set LiquidToken protocol data for regen-redwood-1 qregen",
+      "description": "This proposal aims to set the allowed liquid tokens protocol data for regen-redwood-1/uqregen",
+      "type": "ProtocolDataTypeLiquidToken",
+      "data": {"ChainID": "regen-redwood-1", "RegisteredZoneChainID":"regen-redwood-1", "QAssetDenom":"uqregen", "IbcDenom": "ibc/734502C2359AB45D5116AC35CA0FEC23B84B0F5E8179BCDD02FD637218C608A6"}
+    },
+    "authority": "quick10d07y265gmmuvt4z0w9aw880jnsr700j3xrh0p"
+  },
+  {
+    "@type": "/cosmos.gov.v1.MsgExecLegacyContent",
+    "content": {
+      "@type": "/quicksilver.participationrewards.v1.AddProtocolDataProposal",
+      "title": "Set LiquidToken protocol data for elgafar-1 qstars",
+      "description": "This proposal aims to set the allowed liquid tokens protocol data for elgafar-1/uqstars",
+      "type": "ProtocolDataTypeLiquidToken",
+      "data": {"ChainID": "elgafar-1", "RegisteredZoneChainID":"elgafar-1", "QAssetDenom":"uqstars", "IbcDenom": "ibc/B1DFCA1F09E485C8D19F5A09DB4148D60E0317D2259F5D661233EC9205220D09"}
+    },
+    "authority": "quick10d07y265gmmuvt4z0w9aw880jnsr700j3xrh0p"
+  }
+],
+"metadata": ""
+}

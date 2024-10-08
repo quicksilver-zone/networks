@@ -1,0 +1,21 @@
+{
+"deposit": "10000000uqck",
+"proposer": "",
+"messages": [{
+    "@type": "/cosmos.gov.v1.MsgExecLegacyContent",
+    "content": {
+      "@type": "/cosmos.upgrade.v1beta1.SoftwareUpgradeProposal",
+      "title": "Upgrade quicksilverd to v1.4.5-rc2",
+      "description": "This proposal aims to upgrade Quicksilver rhye testnet to v1.4.5-rc2 of quicksilverd.\\n \\nThis release contains:\\n\\n - Fix to participationrewards epochblock callback\\n\\n - Bump dependencies\\n\\n",
+      "plan": {
+        "name": "v1.4.5-rc2",
+        "time": "0001-01-01T00:00:00Z",
+        "height": "61600",
+        "info": "{\"binaries\":{\"linux/amd64\": \"https://github.com/ingenuity-build/quicksilver/releases/download/v1.4.5-rc2/quicksilverd-v1.4.5-rc2-amd64?checksum=sha256:03fbefccce7fb798dc4d358c6b3241da92bfa127fa1199931c8b3998d681d0c7\"}}",
+        "upgraded_client_state": null
+      }
+    },
+    "authority": "quick10d07y265gmmuvt4z0w9aw880jnsr700j3xrh0p"
+}],
+"metadata": ""
+}

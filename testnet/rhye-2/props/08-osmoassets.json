@@ -1,0 +1,40 @@
+{
+"deposit": "10000000uqck",
+"proposer": "",
+"messages": [
+{
+    "@type": "/cosmos.gov.v1.MsgExecLegacyContent",
+    "content": {
+      "@type": "/quicksilver.participationrewards.v1.AddProtocolDataProposal",
+      "title": "Set LiquidToken protocol data for osmosis qosmo",
+      "description": "This proposal aims to set the allowed liquid tokens protocol data for osmo-test-5/uqosmo",
+      "type": "ProtocolDataTypeLiquidToken",
+      "data": {"ChainID": "osmo-test-5", "RegisteredZoneChainID":"osmo-test-5", "QAssetDenom":"uqosmo", "IbcDenom": "ibc/3430486BCE2A0F919567CACC229E04688C9A19D00D418A23C41F9F7BE8DF717B"}
+    },
+    "authority": "quick10d07y265gmmuvt4z0w9aw880jnsr700j3xrh0p"
+},
+{
+    "@type": "/cosmos.gov.v1.MsgExecLegacyContent",
+    "content": {
+      "@type": "/quicksilver.participationrewards.v1.AddProtocolDataProposal",
+      "title": "Set LiquidToken protocol data for osmosis qregen",
+      "description": "This proposal aims to set the allowed liquid tokens protocol data for osmo-test-5/uqregen",
+      "type": "ProtocolDataTypeLiquidToken",
+      "data": {"ChainID": "osmo-test-5", "RegisteredZoneChainID":"regen-redwood-1", "QAssetDenom":"uqregen", "IbcDenom": "ibc/515C1558ACAD591999113AB083153A14EB15AB1683A8C499D676A9C4F20B34D4"}
+    },
+    "authority": "quick10d07y265gmmuvt4z0w9aw880jnsr700j3xrh0p"
+},
+{
+    "@type": "/cosmos.gov.v1.MsgExecLegacyContent",
+    "content": {
+      "@type": "/quicksilver.participationrewards.v1.AddProtocolDataProposal",
+      "title": "Set LiquidToken protocol data for osmosis qstars",
+      "description": "This proposal aims to set the allowed liquid tokens protocol data for osmo-test-5/uqstars",
+      "type": "ProtocolDataTypeLiquidToken",
+      "data": {"ChainID": "osmo-test-5", "RegisteredZoneChainID":"elgafar-1", "QAssetDenom":"uqstars", "IbcDenom": "ibc/20505C4803595648F246974E08F018CEAB28F57B2D8D81D19342309C633D7167"}
+    },
+    "authority": "quick10d07y265gmmuvt4z0w9aw880jnsr700j3xrh0p"
+}
+],
+"metadata": ""
+}

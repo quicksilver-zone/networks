@@ -1,0 +1,21 @@
+{
+"deposit": "10000000uqck",
+"proposer": "",
+"messages": [{
+    "@type": "/cosmos.gov.v1.MsgExecLegacyContent",
+    "content": {
+      "@type": "/cosmos.upgrade.v1beta1.SoftwareUpgradeProposal",
+      "title": "Upgrade quicksilverd to v1.4.5-rc3",
+      "description": "This proposal aims to upgrade Quicksilver rhye testnet to v1.4.5-rc3 of quicksilverd.\\n \\nThis release contains fixes as detailed here: https://github.com/quicksilver-zone/quicksilver/releases/tag/v1.4.5-rc3\\n\\n",
+      "plan": {
+        "name": "v1.4.5-rc3",
+        "time": "0001-01-01T00:00:00Z",
+        "height": "105700",
+        "info": "{\"binaries\":{\"linux/amd64\": \"https://github.com/ingenuity-build/quicksilver/releases/download/v1.4.5-rc3/quicksilverd-v1.4.5-rc3-amd64?checksum=sha256:6b6f5c31fbe4357a5e05609079b41eb8bac690458c9bd815f05862647a3228bb\"}}",
+        "upgraded_client_state": null
+      }
+    },
+    "authority": "quick10d07y265gmmuvt4z0w9aw880jnsr700j3xrh0p"
+}],
+"metadata": ""
+}
