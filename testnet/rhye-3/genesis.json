@@ -147,6 +147,20 @@
           "address": "quick15fnel3kweqzjy62rpdczfwg6mp0yxp2m0x3flg",
           "pub_key": null,
           "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "account_number": "0",
+          "address": "quick1saw6zksu7ecxt6zzn88mq9dr0k3rjv2k46r9w6",
+          "pub_key": null,
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "account_number": "0",
+          "address": "quick1m80adqn0l9k5fw4mvm8794nm74kuxqme3g3zvp",
+          "pub_key": null,
+          "sequence": "0"
         }
       ],
       "params": {
@@ -271,6 +285,15 @@
           ]
         },
         {
+          "address": "quick1saw6zksu7ecxt6zzn88mq9dr0k3rjv2k46r9w6",
+          "coins": [
+            {
+              "amount": "500000000000",
+              "denom": "uqck"
+            }
+          ]
+        },
+        {
           "address": "quick1jdc79gn5h6q44aqss72a70eyvlrzcxrll3wt82",
           "coins": [
             {
@@ -316,6 +339,15 @@
           ]
         },
         {
+          "address": "quick1m80adqn0l9k5fw4mvm8794nm74kuxqme3g3zvp",
+          "coins": [
+            {
+              "amount": "500000000000",
+              "denom": "uqck"
+            }
+          ]
+        },
+        {
           "address": "quick1ueeevdvlwjdmfljm6qsg083e6zldy0d0mng4hj",
           "coins": [
             {
@@ -350,7 +382,7 @@
       },
       "supply": [
         {
-          "amount": "207503000000000",
+          "amount": "208503000000000",
           "denom": "uqck"
         }
       ]
@@ -745,6 +777,68 @@
                 },
                 "public_key": {
                   "@type": "/cosmos.crypto.secp256k1.PubKey",
+                  "key": "A460g6jLk0Xp/xhEOU4wn1wA2SYibhq74hXeqiCv8nex"
+                },
+                "sequence": "0"
+              }
+            ],
+            "tip": null
+          },
+          "body": {
+            "extension_options": [],
+            "memo": "6e7da51a9bac4de39e927b06a44ec04b80756c2f@162.55.103.44:26656",
+            "messages": [
+              {
+                "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
+                "commission": {
+                  "max_change_rate": "0.100000000000000000",
+                  "max_rate": "0.200000000000000000",
+                  "rate": "0.050000000000000000"
+                },
+                "delegator_address": "quick1saw6zksu7ecxt6zzn88mq9dr0k3rjv2k46r9w6",
+                "description": {
+                  "details": "",
+                  "identity": "",
+                  "moniker": "CryptoCats.Pro",
+                  "security_contact": "",
+                  "website": ""
+                },
+                "min_self_delegation": "1",
+                "pubkey": {
+                  "@type": "/cosmos.crypto.ed25519.PubKey",
+                  "key": "h1wW7fI8mx7U+mnwQmVMFBWjvzR8Z5EtZ4A2IMcH07E="
+                },
+                "validator_address": "quickvaloper1saw6zksu7ecxt6zzn88mq9dr0k3rjv2kthdgqn",
+                "value": {
+                  "amount": "400000000000",
+                  "denom": "uqck"
+                }
+              }
+            ],
+            "non_critical_extension_options": [],
+            "timeout_height": "0"
+          },
+          "signatures": [
+            "dgRt3O8WXtT2Ukb8NUBEr+g7IditTL+dMdHxdnbwIPt0uXTWAoeYF956DFrCyJWPloVUjegzqtyTA9hz+ipkhQ=="
+          ]
+        },
+        {
+          "auth_info": {
+            "fee": {
+              "amount": [],
+              "gas_limit": "200000",
+              "granter": "",
+              "payer": ""
+            },
+            "signer_infos": [
+              {
+                "mode_info": {
+                  "single": {
+                    "mode": "SIGN_MODE_DIRECT"
+                  }
+                },
+                "public_key": {
+                  "@type": "/cosmos.crypto.secp256k1.PubKey",
                   "key": "A6FsQfgbUjSQs4tV8xznbGY+BMdDxJBelES8zleMgEvM"
                 },
                 "sequence": "0"
@@ -1036,6 +1130,68 @@
           },
           "signatures": [
             "tILU+c6fTZ1VLlAKxspOxrTeeJyjjF8wxeXY8l4ZwnVidJfmmpczccD6kLrA44i2ptUp7VMKA/2jKmrb0E0NIA=="
+          ]
+        },
+        {
+          "auth_info": {
+            "fee": {
+              "amount": [],
+              "gas_limit": "200000",
+              "granter": "",
+              "payer": ""
+            },
+            "signer_infos": [
+              {
+                "mode_info": {
+                  "single": {
+                    "mode": "SIGN_MODE_DIRECT"
+                  }
+                },
+                "public_key": {
+                  "@type": "/cosmos.crypto.secp256k1.PubKey",
+                  "key": "A3Te1NkmkykhKp20pggAmhSof2wXjQiWQYlOZpfziwd3"
+                },
+                "sequence": "0"
+              }
+            ],
+            "tip": null
+          },
+          "body": {
+            "extension_options": [],
+            "memo": "a64416a8e92ae7d6176adf3790e86463fd25051a@65.109.39.223:26656",
+            "messages": [
+              {
+                "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
+                "commission": {
+                  "max_change_rate": "0.100000000000000000",
+                  "max_rate": "0.200000000000000000",
+                  "rate": "0.050000000000000000"
+                },
+                "delegator_address": "quick1m80adqn0l9k5fw4mvm8794nm74kuxqme3g3zvp",
+                "description": {
+                  "details": "",
+                  "identity": "",
+                  "moniker": "Loona.Systems",
+                  "security_contact": "",
+                  "website": ""
+                },
+                "min_self_delegation": "1",
+                "pubkey": {
+                  "@type": "/cosmos.crypto.ed25519.PubKey",
+                  "key": "kENBDvamTT/ZZLW+r+HITyPPl9L+NC3+q+mugaIK/ao="
+                },
+                "validator_address": "quickvaloper1m80adqn0l9k5fw4mvm8794nm74kuxqme09l0zg",
+                "value": {
+                  "amount": "400000000000",
+                  "denom": "uqck"
+                }
+              }
+            ],
+            "non_critical_extension_options": [],
+            "timeout_height": "0"
+          },
+          "signatures": [
+            "x+OANiIizEq89UeWW/BneMm6+AEz127Iyc5R2oti+1xDOT2lBiajPdbmN/fFTvQlNPn6eCg0C6/3JxrISUlO6A=="
           ]
         },
         {

@@ -17,7 +17,7 @@ In order to onboard your new `rhye-3`, you must do the following:
 1. Build, or download the Quicksilver v1.6.3 binary from https://github.com/quicksilver-zone/quicksilver; alternatively use the docker container at quicksilverzone/quicksilver:v1.6.3.
 2. Run `quicksilverd init <moniker>`.
 3. Download the genesis file in the rhye-3 folder to ~/.quicksilverd/config/genesis.json.
-4. Assert the genesis file you downloaded matches the expected hash, using `cat ~/.quicksilverd/config/genesis.json | jq . -Sc | shasum -a256`. It should return `e0cd0640a2a6e30667d1e3393e958f8333736c44799a64857a7c90e2dc11dd03`.
+4. Assert the genesis file you downloaded matches the expected hash, using `cat ~/.quicksilverd/config/genesis.json | jq . -Sc | shasum -a256`. It should return `0c41baa29780c48d9a695700f38950a2e2f96e020875c3f6eb39c77d717dbce5`.
 5. Start the process with `quicksilverd start`. You will probably want to run this as a service.
 6. Once synced (check https://rhye-3.rpc.quicksilver.zone/status), you will want to create a key, get some funds from the faucet, and create your validator:
 
