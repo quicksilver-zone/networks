@@ -262,3 +262,7 @@ Check that the service is running:
 ```sh
 sudo systemctl status cosmovisor
 ```
+
+## Network Resources
+
+- [OpenChainBench live latency benchmark](https://openchainbench.com/benchmarks/quicksilver-rpc) — independent p50/p90/p99 latency measurements for free Quicksilver RPC endpoints, updated every 60 s
